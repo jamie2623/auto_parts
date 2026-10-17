@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    container_name: autoparts-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - autoparts-data:/data
+    restart: unless-stopped
+
+volumes:
+  autoparts-data:
